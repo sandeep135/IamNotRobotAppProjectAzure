@@ -7,8 +7,21 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\car1.jpg" />
+    <None Remove="Resources\car2.jpg" />
+    <None Remove="Resources\road1.jpg" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.ComputerVision" Version="6.0.0" />
+		<PackageReference Include="Tools.InnoSetup" Version="6.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\car1.jpg" />
+	  <Resource Include="Resources\car2.jpg" />
+	  <Resource Include="Resources\road1.jpg" />
 	</ItemGroup>
 
 </Project>

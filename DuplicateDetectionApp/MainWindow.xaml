@@ -7,14 +7,92 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Image Name="Image1" HorizontalAlignment="Left" Height="100" Margin="143,141,0,0" VerticalAlignment="Top" Width="100">
-            <Image.OpacityMask>
-                <ImageBrush/>
-            </Image.OpacityMask>
-        </Image>
-        <Image Name="Image2" Height="100" Width="100" Margin="397,144,303,190"/>
-        <Button Height="30" Width="50" Content="Upload" Name="UploadImage"  Margin="293,334,457,70" Click="UploadImage1_Click"/>
-        
+        <Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <!-- Image 1 -->
+                <Image Name="Image1" Source="/Resources/car1.jpg" Width="100" Height="100" Margin="10">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleX)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleY)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Image.RenderTransform>
+                </Image>
 
+                <!-- Image 2 -->
+                <Image Name ="Image2" Source="/Resources/car2.jpg" Width="100" Height="100" Margin="10">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleX)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleY)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Image.RenderTransform>
+                </Image>
+
+                <!-- Image 3 -->
+                <Image Name ="Image3" Source="/Resources/road1.jpg" Width="100" Height="100" Margin="10">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleX)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleY)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Image.RenderTransform>
+                </Image>
+
+                <!-- Image 4 -->
+                <Image Name ="Image4" Source="/Resources/road1.jpg" Width="100" Height="100" Margin="10">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleX)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="(Image.RenderTransform).(ScaleTransform.ScaleY)"
+                                    From="1" To="1.2" Duration="0:0:1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Image.RenderTransform>
+                </Image>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

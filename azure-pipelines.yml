@@ -16,6 +16,12 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+# Install Inno Setup with chocolatey
+- task: PowerShell@2
+  displayName: 'Inno setup download'
+  inputs:
+    targetType: 'inline'
+    script: 'choco install innosetup'
 
 - task: NuGetCommand@2
   inputs:
@@ -31,3 +37,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+# Execute install script
+- task: PowerShell@2
+  displayName: 'Execute Inno Setup script'
+  inputs:
+    targetType: 'inline'
+    script: 'iscc.exe IAmNotRobotAppAzure\\installer.iss'
