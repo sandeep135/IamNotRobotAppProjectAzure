@@ -38,6 +38,19 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: CopyFiles@2
+  displayName: 'Copy Files to bin'
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    Contents: '**\DuplicateDetectionApp\bin\**'
+    TargetFolder: ' $(build.artifactstagingdirectory)\bin'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: CheckBinFolder'
+  inputs:
+    PathtoPublish: ' $(build.artifactstagingdirectory)\bin'
+    ArtifactName: CheckBinFolder
+
 # Execute install script
 - task: PowerShell@2
   displayName: 'Execute Inno Setup script'
