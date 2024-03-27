@@ -44,20 +44,20 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-# Execute install script
-- task: PowerShell@2
-  displayName: 'Execute Inno Setup script'
-  inputs:
-    targetType: 'inline'
-    script: 'iscc.exe DuplicateDetectionApp\\installler.iss'
+## Execute install script
+#- task: PowerShell@2
+#  displayName: 'Execute Inno Setup script'
+#  inputs:
+#    targetType: 'inline'
+#    script: 'iscc.exe DuplicateDetectionApp\\installler.iss'
 
-# Copy setup into ArtifactStaging folder
-- task: CopyFiles@2
-  displayName: 'Copy setup to artifact'
-  inputs:
-    SourceFolder: 'IAmNotRobotAppAzure\\Output'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+## Copy setup into ArtifactStaging folder
+#- task: CopyFiles@2
+#  displayName: 'Copy setup to artifact'
+#  inputs:
+#    SourceFolder: 'IAmNotRobotAppAzure\\Output'
+#    Contents: '**'
+#    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # Publish artifact
 - task: PublishBuildArtifacts@1
