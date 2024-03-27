@@ -9,9 +9,9 @@ Compression=lzma
 SolidCompression=yes
 
 [Files]
-Source: "/bin/Release/*.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "/bin/Release/*.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "/bin/Release/*.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\bin\Release\*.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\bin\Release\*.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\bin\Release\*.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
