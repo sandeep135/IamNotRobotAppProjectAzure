@@ -44,3 +44,18 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'iscc.exe IAmNotRobotAppAzure\\installer.iss'
+
+# Copy setup into ArtifactStaging folder
+- task: CopyFiles@2
+  displayName: 'Copy setup to artifact'
+  inputs:
+    SourceFolder: 'IAmNotRobotAppAzure\\Output'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+# Publish artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
