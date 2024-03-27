@@ -38,12 +38,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to bin'
+- - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: '**\DuplicateDetectionApp\bin\**'
-    TargetFolder: ' $(build.artifactstagingdirectory)\bin'
+    SourceFolder: 'DuplicateDetectionApp\\bin\\Release'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: CheckBinFolder'
