@@ -1,5 +1,4 @@
 ﻿[Setup]
-AppId={9EDC4A8E-614A-40C3-8F7B-377454E43339}
 AppName=IAmNotRobotAppAzure
 AppVersion=1.0
 DefaultDirName={pf}\IAmNotRobotAppAzure
