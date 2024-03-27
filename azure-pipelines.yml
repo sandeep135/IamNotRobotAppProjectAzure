@@ -38,7 +38,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- - task: CopyFiles@2
+- task: CopyFiles@2
   inputs:
     SourceFolder: 'DuplicateDetectionApp\\bin\\Release'
     Contents: '**'
