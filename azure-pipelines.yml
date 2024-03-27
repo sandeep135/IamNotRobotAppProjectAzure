@@ -43,7 +43,7 @@ steps:
   displayName: 'Execute Inno Setup script'
   inputs:
     targetType: 'inline'
-    script: 'iscc.exe IAmNotRobotAppAzure\\installler.iss'
+    script: 'iscc.exe DuplicateDetectionApp\\installler.iss'
 
 # Copy setup into ArtifactStaging folder
 - task: CopyFiles@2
